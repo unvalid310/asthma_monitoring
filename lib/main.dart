@@ -96,6 +96,7 @@ class _MyAppState extends State<MyApp> {
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
           ],
           supportedLocales: _locals,
         );

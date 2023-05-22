@@ -34,7 +34,7 @@ class OptionButton extends StatelessWidget {
               child: Text(
                 label,
                 style: poppinsMedium.copyWith(
-                  fontSize: 12.sp,
+                  fontSize: 10.sp,
                   color: (success) ? Color(0xFF92A3FD) : Colors.grey,
                 ),
               ),
@@ -42,7 +42,7 @@ class OptionButton extends StatelessWidget {
             SizedBox(width: 10),
             Icon(
               icon,
-              size: 18,
+              size: 14,
               color: (success) ? Color(0xFF92A3FD) : Colors.grey,
             )
           ],

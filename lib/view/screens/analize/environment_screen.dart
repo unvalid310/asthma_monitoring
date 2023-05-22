@@ -26,6 +26,7 @@ class _EnvironmentScreenState extends State<EnvironmentScreen> {
   final TextEditingController _temperatureController = TextEditingController();
   final TextEditingController _humidityController = TextEditingController();
   final TextEditingController _co2Controller = TextEditingController();
+  final TextEditingController _pm25Controller = TextEditingController();
 
   @override
   void initState() {
@@ -65,6 +66,7 @@ class _EnvironmentScreenState extends State<EnvironmentScreen> {
                     _temperatureController.text = _enviAnalizeModel.temperature;
                     _humidityController.text = _enviAnalizeModel.humidity;
                     _co2Controller.text = _enviAnalizeModel.co2;
+                    _pm25Controller.text = _enviAnalizeModel.pm25;
                   }
                 }
                 return Form(
@@ -210,6 +212,56 @@ class _EnvironmentScreenState extends State<EnvironmentScreen> {
                           ],
                         ),
                       ),
+                      SizedBox(height: 3.h),
+                      Container(
+                        width: double.infinity,
+                        child: Row(
+                          children: [
+                            Expanded(
+                              flex: 5,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  RichText(
+                                    text: TextSpan(
+                                      text: "PM",
+                                      style: poppinsMedium.copyWith(
+                                        fontSize: 12.sp,
+                                        color: ColorResources.COLOR_BLACK,
+                                      ),
+                                      children: [
+                                        TextSpan(
+                                          text: '2.5',
+                                          style: poppinsRegular.copyWith(
+                                            fontSize: 6.sp,
+                                            color: ColorResources.COLOR_BLACK,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  // Text(
+                                  //   '< 100 ppm',
+                                  //   style: poppinsMedium.copyWith(
+                                  //     fontSize: 8.sp,
+                                  //     color: Color(0xFFEEA4CE),
+                                  //   ),
+                                  // ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(width: 10),
+                            Expanded(
+                              flex: 7,
+                              child: CustomField(
+                                hintText: 'PM2.5',
+                                controller: _pm25Controller,
+                                inputType: TextInputType.number,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       SizedBox(height: 7.h),
                       Row(
                         children: [
@@ -220,7 +272,8 @@ class _EnvironmentScreenState extends State<EnvironmentScreen> {
                                 final data = {
                                   "temperature": _temperatureController.text,
                                   "humidity": _humidityController.text,
-                                  "co2": _co2Controller.text
+                                  "co2": _co2Controller.text,
+                                  "pm25": _pm25Controller.text,
                                 };
 
                                 if (_formKey.currentState.validate()) {

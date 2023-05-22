@@ -70,7 +70,7 @@ class _OptionScreenState extends State<OptionScreen> {
                         SizedBox(height: 7.h),
                         OptionButton(
                           success: (_analizeModel.body != 0.0) ? true : false,
-                          label: 'Body',
+                          label: 'Vital Sign',
                           icon: Icons.check_circle_outline_rounded,
                           onTap: () async {
                             var result = await Navigator.of(context)
@@ -87,7 +87,7 @@ class _OptionScreenState extends State<OptionScreen> {
                         SizedBox(height: 2.h),
                         OptionButton(
                           success: (_analizeModel.envi != 0.0) ? true : false,
-                          label: 'Environment',
+                          label: 'Air Quality',
                           icon: Icons.check_circle_outline_rounded,
                           onTap: () async {
                             var result = await Navigator.of(context)
@@ -104,7 +104,7 @@ class _OptionScreenState extends State<OptionScreen> {
                         SizedBox(height: 2.h),
                         OptionButton(
                           success: (_analizeModel.mind != 0.0) ? true : false,
-                          label: 'Mind',
+                          label: 'Psychological',
                           icon: Icons.check_circle_outline_rounded,
                           onTap: () async {
                             var result = await Navigator.of(context)

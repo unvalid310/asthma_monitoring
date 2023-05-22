@@ -32,7 +32,7 @@ class ResultRepo {
     }
   }
 
-  Future<ApiResponse> getHistory({String date}) async {
+  Future<ApiResponse> getHistory({String bulan, String tahun}) async {
     try {
       Response response = await dioClient.get(
         '${AppConstants.RESULT}/history',
@@ -40,6 +40,8 @@ class ResultRepo {
           'user_id': sharedPreferences.getString(
             AppConstants.ID_USER,
           ),
+          'bulan': bulan,
+          'tahun': tahun
         },
       );
       return ApiResponse.withSuccess(response);

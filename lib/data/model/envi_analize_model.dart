@@ -4,6 +4,7 @@ class EnviAnalizeModel {
   String _temperature;
   String _humidity;
   String _co2;
+  String _pm25;
   String _createdAt;
   String _updatedAt;
   String _deletedAt;
@@ -14,6 +15,7 @@ class EnviAnalizeModel {
     String temperature,
     String humidity,
     String co2,
+    String pm25,
     String createdAt,
     String updatedAt,
     String deletedAt,
@@ -23,6 +25,7 @@ class EnviAnalizeModel {
     this._temperature = temperature;
     this._humidity = humidity;
     this._co2 = co2;
+    this._pm25 = pm25;
     this._createdAt = createdAt;
     this._updatedAt = updatedAt;
     this._deletedAt = deletedAt;
@@ -33,6 +36,7 @@ class EnviAnalizeModel {
   String get temperature => _temperature;
   String get humidity => _humidity;
   String get co2 => _co2;
+  String get pm25 => _pm25;
   String get createdAt => _createdAt;
   String get updatedAt => _updatedAt;
   String get deletedAt => _deletedAt;
@@ -43,6 +47,7 @@ class EnviAnalizeModel {
     _temperature = json['temperature'];
     _humidity = json['humidity'];
     _co2 = json['co2'];
+    _pm25 = json['pm25'];
     _createdAt = json['created_at'];
     _updatedAt = json['updated_at'];
     _deletedAt = json['deleted_at'];
