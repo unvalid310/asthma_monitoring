@@ -2,7 +2,7 @@ import 'package:asthma_monitor/data/model/response/language_model.dart';
 import 'package:asthma_monitor/utill/images.dart';
 
 class AppConstants {
-  static const String BASE_URL = 'http://apps.sacm.web.id/api/';
+  static const String BASE_URL = 'https://asthmamonitor.online/api/';
 
   static const String REGISTER_URI = 'auth/register';
   static const String LOGIN_URI = 'auth/login';
